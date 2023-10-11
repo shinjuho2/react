@@ -21,7 +21,7 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
-        <h4>{ 글제목[1] } <span onClick={ () => { 글제목('C언어') } }>🔄️</span></h4>
+        <h4>{ 글제목[1] } <span onClick={ () => { 글제목1(['파이썬', 'C언어', '물고기']) } }>🔄️</span></h4>
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
