@@ -7,7 +7,7 @@ import { useState } from 'react';
 function App() {
 
   let post = '서울'
-  let [글제목, 글제목1] = useState(['b', 'a', 'c']);
+  let [글제목, 글제목1] = useState(['python', 'java', 'Go']);
   let [good, good1] = useState(0);
 
 
@@ -26,7 +26,7 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
-        <h4>{글제목[1]} <span onClick={() => { 글제목1(['python', 'C', 'fish']) }}>🔄️</span></h4>
+        <h4>{글제목[1]} <span onClick={() => { 글제목1(['python', 'C', 'Go']) }}>🔄️</span></h4>
         <p>2월 17일 발행</p>
       </div>
       <div className='list'>
