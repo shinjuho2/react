@@ -8,8 +8,10 @@ function App() {
 
   let post = '서울'
   let [글제목, 글제목1] = useState(['python', 'java', 'Go']);
-  let [good, good1] = useState(0);
+  let [good, good1] = useState([0, 0, 0]);
   let [modal, setModal] = useState(0)
+
+  
 
 
   return (
@@ -17,7 +19,7 @@ function App() {
       <div className='black-nav'>
         <h4>blog</h4>
       </div>
-      <button onClick={() => {
+      {/* <button onClick={() => {
         let copy = [...글제목];
         copy.sort();
         글제목1(copy)
@@ -33,7 +35,18 @@ function App() {
       <div className='list'>
         <h4 onClick={() => { setModal(!modal) }}>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
-      </div>
+      </div> */}
+
+      {
+        글제목.map(function (a, i) {
+          return (
+            <div className='list' key={i}>
+              <h4>{글제목[i]} <span onClick={() => { good1(good[i] + 1) }}>👍</span> {good} </h4>
+              <p>2월 17일 발행</p>
+            </div>
+          )
+        })
+      }
 
       {
         modal == 1 ? <Modal></Modal> : null
