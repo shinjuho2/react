@@ -11,6 +11,7 @@ function App() {
   let [good, good1] = useState([0, 0, 0]);
   let [modal, setModal] = useState(0);
   let [title, settitle] = useState(0);
+  let[input, setinput] = useState('');
   
 
 
@@ -41,7 +42,8 @@ function App() {
         글제목.map(function (a, i) {
           return (
             <div className='list' key={i}>
-              <h4 onClick={() => { setModal(!modal); settitle(i) }}>{글제목[i]} <span onClick={() => { 
+              <h4 onClick={() => { setModal(!modal); settitle(i) }}>{글제목[i]} <span onClick={(e) => { 
+                e.stopPropagation()
                 let copy = [...good]
                 copy[i] = copy[i] + 1
                 good1(copy)
@@ -52,7 +54,7 @@ function App() {
         })
       }
 
-      <input onChange={()=>{}}></input>
+      <input onChange={(e)=>{ setinput(e.target.value) }}></input>
 
       {
         modal == 1 ? <Modal 글제목={글제목} title={title}></Modal> : null
