@@ -48,13 +48,20 @@ function App() {
                 copy[i] = copy[i] + 1
                 good1(copy)
               }}>👍</span> {good[i]} </h4>
-              <p>2월 17일 발행</p>
+              <p>2월 17일 발행 <button className='del'>삭제</button></p> 
             </div>
           )
         })
       }
 
-      <input onChange={(e)=>{ setinput(e.target.value) }}></input>
+      <input></input>
+      <button onClick={ (e) => {
+        console.log(e.value)
+      } }>추가</button>
+
+      {
+        
+      }
 
       {
         modal == 1 ? <Modal 글제목={글제목} title={title}></Modal> : null

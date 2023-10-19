@@ -32,6 +32,12 @@ div {
   text-align : left;
 }
 
+.del {
+  position: relative;
+  top: -20px;
+  left: 60%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
