@@ -48,7 +48,7 @@ function App() {
                 copy[i] = copy[i] + 1
                 good1(copy)
               }}>👍</span> {good[i]} </h4>
-              <p>2월 17일 발행 <button className='del'>삭제</button></p> 
+              <p>2월 17일 발행 <button className='del' >삭제</button></p> 
             </div>
           )
         })
