@@ -54,9 +54,11 @@ function App() {
         })
       }
 
-      <input></input>
+      <input onChange={ ()=>{
+
+      } }></input>
       <button onClick={ (e) => {
-        console.log(e.value)
+        글제목1(e.target.value)
       } }>추가</button>
 
       {
