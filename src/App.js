@@ -54,11 +54,11 @@ function App() {
         })
       }
 
-      <input onChange={ ()=>{
-
-      } }></input>
-      <button onClick={ (e) => {
-        글제목1(e.target.value)
+      <input onChange={ (e)=>{ setinput(e.target.value) } }></input>
+      <button onClick={ () => {
+        let copy = [...글제목];
+        copy.unshift(input)
+        글제목1(copy)
       } }>추가</button>
 
       {
