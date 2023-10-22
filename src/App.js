@@ -48,7 +48,9 @@ function App() {
                 copy[i] = copy[i] + 1
                 good1(copy)
               }}>👍</span> {good[i]} </h4>
-              <p>2월 17일 발행 <button className='del' >삭제</button></p> 
+              <p>2월 17일 발행 <button className='del' onClick={ ()=>{
+                
+              } }>삭제</button></p> 
             </div>
           )
         })
@@ -60,10 +62,6 @@ function App() {
         copy.unshift(input)
         글제목1(copy)
       } }>추가</button>
-
-      {
-        
-      }
 
       {
         modal == 1 ? <Modal 글제목={글제목} title={title}></Modal> : null
