@@ -48,9 +48,12 @@ function App() {
                 copy[i] = copy[i] + 1
                 good1(copy)
               }}>👍</span> {good[i]} </h4>
-              <p>2월 17일 발행 <button className='del' onClick={ ()=>{
-                
-              } }>삭제</button></p> 
+              <p>2월 17일 발행</p>
+              <button className='del' onClick={ ()=>{
+                let copy = [...글제목];
+                copy.splice(i, 1)
+                글제목1(copy)
+              } }>삭제</button> 
             </div>
           )
         })
