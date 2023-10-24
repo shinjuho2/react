@@ -2,7 +2,7 @@
 
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function App() {
 
@@ -83,5 +83,16 @@ function Modal(props) {
     </div>
   )
 }
+
+// class Modal2 extends React.Component {
+//   constructor() {
+//     super()
+//   }
+//   render() {
+//     return (
+//       <div>안녕</div>
+//     )
+//   }
+// }
 
 export default App;
